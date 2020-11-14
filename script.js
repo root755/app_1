@@ -11,23 +11,22 @@ let personalMovieDB = {
     private: false
 };
 
-// const a = prompt("Один из просмотренных фильмов?", ""),
-//       b = prompt("На сколько его оцениваете?", ""),
-//       c = prompt("Какой еще смотрели?", ""),
-//       d = prompt("Офените его?", "");
 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-
-
-// console.log(personalMovieDB);
 
 
 for (let i = 0; i < 2; i++) {
     const a = prompt("Один из просмотренных фильмов?", ""),
-          b = prompt("На сколько его оцениваете?", "");
+          b = prompt("На сколько его оцениваете?", "");    
 
+if (a != null && b != null && a != "" && b != "" && a.length < 50 ) {
     personalMovieDB.movies[a] = b;
+    console.log('done');
+} else {
+    i--;
+    console.log('error')
 }
 
-console.log(personalMovieDB);
+    
+}
+
+// console.log(personalMovieDB);
