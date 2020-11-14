@@ -1,15 +1,23 @@
 "use sctrict";
 
-const numberOfFilms = prompt("Сколько Фильмов Вы уже посмотрели?", "");
+const numberOfFilms = +prompt("Сколько Фильмов Вы уже посмотрели?", "");
 
-const obj1;
-const obj2;
-let arr = [];
 
 let personalMovieDB = {
     count: numberOfFilms,
-    movies: obj1,
-    actors: obj2,
-    genres: arr,
+    movies: {},
+    actors: {},
+    genres: [],
     private: false
 };
+
+const a = prompt("Один из просмотренных фильмов?", ""),
+      b = prompt("На сколько его оцениваете?", ""),
+      c = prompt("Какой еще смотрели?", ""),
+      d = prompt("Офените его?", "");
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+
+console.log(personalMovieDB);
