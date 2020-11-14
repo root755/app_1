@@ -11,13 +11,23 @@ let personalMovieDB = {
     private: false
 };
 
-const a = prompt("Один из просмотренных фильмов?", ""),
-      b = prompt("На сколько его оцениваете?", ""),
-      c = prompt("Какой еще смотрели?", ""),
-      d = prompt("Офените его?", "");
+// const a = prompt("Один из просмотренных фильмов?", ""),
+//       b = prompt("На сколько его оцениваете?", ""),
+//       c = prompt("Какой еще смотрели?", ""),
+//       d = prompt("Офените его?", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
 
+
+// console.log(personalMovieDB);
+
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из просмотренных фильмов?", ""),
+          b = prompt("На сколько его оцениваете?", "");
+
+    personalMovieDB.movies[a] = b;
+}
 
 console.log(personalMovieDB);
